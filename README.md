@@ -105,7 +105,7 @@ Beberapa indikator kunci yang ditampilkan di bagian atas dashboard:
   - Menandakan perbedaan performa akademik berdasarkan gender.
 
 - **Usia Saat Pendaftaran**    
-  - Mayoritas mendaftar di usia **18 tahun (3.047 mahasiswa)**.
+  - Mayoritas mendaftar di usia **15-23 tahun (3.047 mahasiswa)**.
   - Tren ini menunjukkan bahwa institusi menarik sebagian besar siswa dari kelompok usia muda.
 
 - **Status Pernikahan dan Fokus Belajar**    
