@@ -33,9 +33,9 @@ st.markdown("""
 st.write("Masukkan data untuk memprediksi apakah mahasiswa akan **Dropout**, **Enrolled**, atau **Graduate**.")
 
 # --- Load model dan encoder ---
-label_encoder = joblib.load("label_encoder.joblib")
-scaler = joblib.load("minmax_scaler.joblib")
-model = joblib.load("xgb_model.joblib")
+label_encoder = joblib.load("Model/label_encoder.joblib")
+scaler = joblib.load("Model/minmax_scaler.joblib")
+model = joblib.load("Model/xgb_model.joblib")
 
 # List of feature names (these should match the features used in the model)
 feature_names = [
