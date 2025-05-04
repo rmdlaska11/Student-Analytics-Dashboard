@@ -2,6 +2,8 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import joblib
+import requests
+import tempfile
 import os
 
 # --- Konfigurasi halaman ---
@@ -33,9 +35,30 @@ st.markdown("""
 st.write("Masukkan data untuk memprediksi apakah mahasiswa akan **Dropout**, **Enrolled**, atau **Graduate**.")
 
 # --- Load model dan encoder ---
-label_encoder = joblib.load("Model/label_encoder.joblib")
-scaler = joblib.load("Model/minmax_scaler.joblib")
-model = joblib.load("Model/xgb_model.joblib")
+# Fungsi untuk mendownload dan memuat model dari URL
+def download_and_load_model(url):
+    # Unduh file menggunakan requests
+    response = requests.get(url)
+    
+    # Simpan file ke direktori sementara
+    with tempfile.NamedTemporaryFile(delete=False) as tmp_file:
+        tmp_file.write(response.content)
+        tmp_file_path = tmp_file.name
+    
+    # Muat model dengan joblib
+    model = joblib.load(tmp_file_path)
+    
+    return model
+
+# URL model
+url_label_encoder = "https://raw.githubusercontent.com/rmdlaska11/Student-Analytics-Dashboard/refs/heads/main/Model/label_encoder.joblib"
+url_scaler = "https://raw.githubusercontent.com/rmdlaska11/Student-Analytics-Dashboard/refs/heads/main/Model/minmax_scaler.joblib"
+url_model = "https://raw.githubusercontent.com/rmdlaska11/Student-Analytics-Dashboard/refs/heads/main/Model/xgb_model.joblib"
+
+# Download dan load model
+label_encoder = download_and_load_model(url_label_encoder)
+scaler = download_and_load_model(url_scaler)
+model = download_and_load_model(url_model)
 
 # List of feature names (these should match the features used in the model)
 feature_names = [
