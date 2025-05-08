@@ -63,7 +63,7 @@ Password: rahmad12
 ## Business Dashboard
 **Dashboard Preview**
 
-![Student Performance Monitoring Dashboard](https://github.com/rmdlaska11/Student-Analytics-Dashboard/blob/main/Dashboard/Dashboard.png)
+![Student Performance Monitoring Dashboard](https://github.com/user-attachments/assets/db61c56f-d7d8-4519-b560-6ad9e15307b0)
 
 ### 1. Tujuan dan Fungsi Dashboard  
 **Student Performance Monitoring Dashboard** dirancang untuk memberikan pandangan menyeluruh terkait kondisi akademik dan demografis mahasiswa. Melalui visualisasi data yang interaktif dan real-time, dashboard ini membantu pemangku kepentingan untuk:
